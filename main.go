@@ -7,6 +7,7 @@ import (
 
 func main() {
 	r := gin.Default()
+	//r.Use(utils.Core())
 	routers.AdminRoutersInit(r)
 	r.Run(":8080")
 }

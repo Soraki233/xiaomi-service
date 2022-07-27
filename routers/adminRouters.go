@@ -8,6 +8,7 @@ import (
 func AdminRoutersInit(r *gin.Engine) {
 	adminRouters := r.Group("/admin")
 	{
-		adminRouters.GET("/rest", admin.BaseController{}.Success)
+		adminRouters.GET("/getCaptcha", admin.LoginController{}.GetCaptcha)
+		adminRouters.POST("/login", admin.LoginController{}.Login)
 	}
 }
